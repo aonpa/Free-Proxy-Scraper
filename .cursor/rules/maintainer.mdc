@@ -1,0 +1,8 @@
+# Free Proxy Scraper
+
+Single-file desktop app: `main.py`.
+
+- Treat `main.py` as **release-stable** — targeted bugfixes and small UI tweaks unless the maintainer asks for a larger refactor.
+- Fetches run on a background thread; **never** block the Tk main thread on network I/O.
+- UI updates from worker threads must go through the existing **queue + `after()`** loop.
+- New Python dependencies require updates to `requirements.txt` and `.github/workflows/build.yml`.
